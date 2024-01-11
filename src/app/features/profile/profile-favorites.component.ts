@@ -10,6 +10,7 @@ import { Subject } from "rxjs";
 @Component({
   selector: "app-profile-favorites",
   templateUrl: "./profile-favorites.component.html",
+  styleUrls: ["./profile-favorites.component.css"],
   imports: [ArticleListComponent],
   standalone: true,
 })
