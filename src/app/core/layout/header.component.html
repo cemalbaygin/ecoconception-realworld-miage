@@ -83,6 +83,7 @@
           [routerLink]="['/profile', currentUser.username]"
           routerLinkActive="active"
         >
+          <!-- pas de alt -->
           <img
             [src]="currentUser.image"
             *ngIf="currentUser.image"

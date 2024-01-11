@@ -86,7 +86,7 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 | 46 | Limiter l'utilisation des GIFs animés                                                 |        3 |              3 |                 3 |             3,00 |
 | 47 | Éviter la lecture et le chargement automatique des vidéos et des sons     ✅            |        4 |              3 |                 4 |             3,67 |
 | 48 | Utiliser les compartiments CSS                                                        |        3 |              2 |                 4 |             3,00 |
-| 49 | Fournir une alternative textuelle aux contenus multimédias                            |        4 |              3 |                 5 |             4,00 |
+| 49 | Fournir une alternative textuelle aux contenus multimédias                 ✅            |        4 |              3 |                 5 |             4,00 |
 | 50 | Économiser de la bande passante grace à un ServiceWorker                              |        4 |              3 |                 4 |             3,67 |
 | 51 | Mettre en place un sitemap efficient                                                  |        2 |              3 |                 2 |             2,00 |
 | 52 | Assurer la compatibilité avec les plus anciens appareils et logiciels du parc         |        4 |              3 |                 5 |             4,00 |
