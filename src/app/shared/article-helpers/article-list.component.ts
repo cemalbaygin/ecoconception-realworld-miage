@@ -30,7 +30,8 @@ export class ArticleListComponent implements OnDestroy {
     if (config) {
       this.query = config;
       this.currentPage = 1;
-      this.runQuery();
+
+      setInterval(() => this.fetchData(),1000);
     }
   }
 
@@ -56,6 +57,10 @@ export class ArticleListComponent implements OnDestroy {
       this.query.filters.offset = this.limit * (this.currentPage - 1);
     }
 
+    this.fetchData();
+  }
+
+  fetchData(){
     this.articlesService
       .query(this.query)
       .pipe(takeUntil(this.destroy$))
