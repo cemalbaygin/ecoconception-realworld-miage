@@ -3,12 +3,18 @@ import { Observable, BehaviorSubject } from "rxjs";
 
 import { JwtService } from "./jwt.service";
 import { map, distinctUntilChanged, tap, shareReplay } from "rxjs/operators";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { User } from "../models/user.model";
 import { Router } from "@angular/router";
 
 @Injectable({ providedIn: "root" })
 export class UserService {
+  private readonly noCacheOptions = {
+    headers: new HttpHeaders({
+      'Cache-Control': 'no-cache', // Indique au navigateur de ne pas mettre en cache la réponse
+      'Pragma': 'no-cache',
+    }),
+  };
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   public currentUser = this.currentUserSubject
     .asObservable()
@@ -27,7 +33,7 @@ export class UserService {
     password: string;
   }): Observable<{ user: User }> {
     return this.http
-      .post<{ user: User }>("/users/login", { user: credentials })
+      .post<{ user: User }>("/users/login", { user: credentials }, this.noCacheOptions)
       .pipe(tap(({ user }) => this.setAuth(user)));
   }
 
@@ -37,7 +43,7 @@ export class UserService {
     password: string;
   }): Observable<{ user: User }> {
     return this.http
-      .post<{ user: User }>("/users", { user: credentials })
+      .post<{ user: User }>("/users", { user: credentials }, this.noCacheOptions)
       .pipe(tap(({ user }) => this.setAuth(user)));
   }
 
@@ -47,7 +53,7 @@ export class UserService {
   }
 
   getCurrentUser(): Observable<{ user: User }> {
-    return this.http.get<{ user: User }>("/user").pipe(
+    return this.http.get<{ user: User }>("/user", this.noCacheOptions).pipe(
       tap({
         next: ({ user }) => this.setAuth(user),
         error: () => this.purgeAuth(),
@@ -57,7 +63,7 @@ export class UserService {
   }
 
   update(user: Partial<User>): Observable<{ user: User }> {
-    return this.http.put<{ user: User }>("/user", { user }).pipe(
+    return this.http.put<{ user: User }>("/user", { user }, this.noCacheOptions).pipe(
       tap(({ user }) => {
         this.currentUserSubject.next(user);
       })

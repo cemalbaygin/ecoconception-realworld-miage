@@ -1,12 +1,19 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpParams } from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { ArticleListConfig } from "../models/article-list-config.model";
 import { Article } from "../models/article.model";
 
+
 @Injectable({ providedIn: "root" })
 export class ArticlesService {
+  private readonly noCacheOptions = {
+    headers: new HttpHeaders({
+      'Cache-Control': 'no-cache', // Indique au navigateur de ne pas mettre en cache la réponse
+      'Pragma': 'no-cache',
+    }),
+  };
   constructor(private readonly http: HttpClient) {}
 
   query(
@@ -22,23 +29,23 @@ export class ArticlesService {
 
     return this.http.get<{ articles: Article[]; articlesCount: number }>(
       "/articles" + (config.type === "feed" ? "/feed" : ""),
-      { params }
+      { params, ...this.noCacheOptions },
     );
   }
 
   get(slug: string): Observable<Article> {
     return this.http
-      .get<{ article: Article }>(`/articles/${slug}`)
+      .get<{ article: Article }>(`/articles/${slug}`, this.noCacheOptions)
       .pipe(map((data) => data.article));
   }
 
   delete(slug: string): Observable<void> {
-    return this.http.delete<void>(`/articles/${slug}`);
+    return this.http.delete<void>(`/articles/${slug}`, this.noCacheOptions);
   }
 
   create(article: Partial<Article>): Observable<Article> {
     return this.http
-      .post<{ article: Article }>("/articles/", { article: article })
+      .post<{ article: Article }>("/articles/", { article: article }, this.noCacheOptions)
       .pipe(map((data) => data.article));
   }
 
@@ -46,17 +53,17 @@ export class ArticlesService {
     return this.http
       .put<{ article: Article }>(`/articles/${article.slug}`, {
         article: article,
-      })
+      }, this.noCacheOptions)
       .pipe(map((data) => data.article));
   }
 
   favorite(slug: string): Observable<Article> {
     return this.http
-      .post<{ article: Article }>(`/articles/${slug}/favorite`, {})
+      .post<{ article: Article }>(`/articles/${slug}/favorite`, {}, this.noCacheOptions)
       .pipe(map((data) => data.article));
   }
 
   unfavorite(slug: string): Observable<void> {
-    return this.http.delete<void>(`/articles/${slug}/favorite`);
+    return this.http.delete<void>(`/articles/${slug}/favorite`, this.noCacheOptions);
   }
 }
