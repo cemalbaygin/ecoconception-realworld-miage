@@ -1,3 +1,16 @@
+<p-dialog #test header="Header" [visible]="true" [position]="'bottomright'" [style]="{ width: '20vw',height: '20vw' }"
+          [modal]="true"
+          [dismissableMask]="true"
+          [closeOnEscape]="true"
+          [closable]="true">
+  <iframe src="https://giphy.com/embed/vexMhgUYTi6mQ" width="480" height="359" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/90s-retro-vexMhgUYTi6mQ">via GIPHY</a></p>
+  <script>
+    function playVideo() {
+      var video = document.getElementById("myVideo");
+      video.play();
+    }
+  </script>
+</p-dialog>
 <nav class="navbar navbar-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/">conduit</a>
@@ -15,7 +28,7 @@
       </li>
 
       <li class="nav-item">
-        <p-dialog header="Header" [(visible)]="!visible" [style]="{ backgroundColor: 'black', width: '50vw'}">
+        <p-dialog header="Header" [(visible)]="visible" [style]="{ backgroundColor: 'black', width: '50vw'}">
           <p style="color: red" (click)="visible= !visible" [routerLink]="['/register']">
             Click ici pour acceder
           </p>

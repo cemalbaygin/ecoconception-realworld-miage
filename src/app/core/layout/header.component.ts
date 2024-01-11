@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import {Component, inject, OnInit} from "@angular/core";
 import { UserService } from "../services/user.service";
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { AsyncPipe, NgIf } from "@angular/common";
@@ -11,7 +11,10 @@ import {DialogModule} from "primeng/dialog";
     imports: [RouterLinkActive, RouterLink, AsyncPipe, NgIf, ShowAuthedDirective, DialogModule],
   standalone: true,
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   visible: boolean = false;
   currentUser$ = inject(UserService).currentUser;
+
+  ngOnInit(): void {
+  }
 }
