@@ -81,10 +81,10 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 | 41 | Mettre en cache les réponses Ajax                                              ✅      |        3 |              2 |                 4 |             3,00 |
 | 42 | Adapter les sons aux contextes d'écoute                                      ✅        |        2 |              2 |                 3 |             2,33 |
 | 43 | Adapter les textes au web                                                             |        3 |              3 |                 3 |             3,00 |
-| 44 | Adapter les vidéos aux contextes de visualisation                                     |        3 |              2 |                 3 |             2,67 |
+| 44 | Adapter les vidéos aux contextes de visualisation                        ✅             |        3 |              2 |                 3 |             2,67 |
 | 45 | Limiter les outils d'analytics et les données collectées                              |        4 |              3 |                 4 |             3,67 |
 | 46 | Limiter l'utilisation des GIFs animés                                                 |        3 |              3 |                 3 |             3,00 |
-| 47 | Éviter la lecture et le chargement automatique des vidéos et des sons                 |        4 |              3 |                 4 |             3,67 |
+| 47 | Éviter la lecture et le chargement automatique des vidéos et des sons     ✅            |        4 |              3 |                 4 |             3,67 |
 | 48 | Utiliser les compartiments CSS                                                        |        3 |              2 |                 4 |             3,00 |
 | 49 | Fournir une alternative textuelle aux contenus multimédias                            |        4 |              3 |                 5 |             4,00 |
 | 50 | Économiser de la bande passante grace à un ServiceWorker                              |        4 |              3 |                 4 |             3,67 |
