@@ -1,5 +1,18 @@
-<p-dialog #test header="Header" [visible]="true" [position]="'bottomright'" [style]="{ width: '20vw',height: '20vw' }"
-          [modal]="true"
+<p-dialog header="Header" [visible]="true" [position]="'bottomright'" [style]="{ width: '20vw',height: '20vw' }"
+          [dismissableMask]="true"
+          [closeOnEscape]="true"
+          [closable]="true">
+  <video width="640" height="360" id="myVideo" preload="auto" loop controls autoplay>
+    <source src="assets/video/fireplace.mp4" type="video/mp4">
+  </video>
+  <script>
+    function playVideo() {
+      var video = document.getElementById("myVideo");
+      video.play();
+    }
+  </script>
+</p-dialog>
+<p-dialog header="Header" [visible]="true" [position]="'bottomleft'" [style]="{ width: '20vw',height: '20vw' }"
           [dismissableMask]="true"
           [closeOnEscape]="true"
           [closable]="true">
