@@ -11,6 +11,14 @@ export class AppComponent implements OnInit, OnDestroy{
 
 
   ngOnInit(): void {
+    var audio = new Audio('assets/son/pet2.mp3');
+
+// Ajouter un gestionnaire d'événement de clic
+    document.addEventListener('click', function() {
+      // Jouer le son à chaque clic
+      audio.play();
+    });
+
     history.pushState(null, '');
 
     fromEvent(window, 'popstate').pipe(

@@ -38,7 +38,7 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 
 |    | Bonnes pratiques                                                                       | Priorité | Mise en oeuvre | Impact écologique | Nombre de points |
 |----|----------------------------------------------------------------------------------------|----------|----------------|-------------------|------------------|
-|  1 | Optimiser le parcours utilisateur                                                      |        5 |              4 |                 5 |             4,67 |
+|  1 | Optimiser le parcours utilisateur                                                 ✅    |        5 |              4 |                 5 |             4,67 |
 |  2 | Préférer la saisie assistée à l'autocomplétion                                         |        3 |              3 |                 3 |             3,00 |
 |  3 | Favoriser un design simple, épuré, adapté au web                                       |        4 |              3 |                 3 |             3,33 |
 |  4 | Privilégier une approche "mobile first", à défaut un chargement adaptatif              |        4 |              4 |                 5 |             4,33 |
