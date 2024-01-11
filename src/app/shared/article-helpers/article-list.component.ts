@@ -31,7 +31,7 @@ export class ArticleListComponent implements OnDestroy {
       this.query = config;
       this.currentPage = 1;
 
-      setInterval(() => this.fetchData(),1000);
+      setInterval(() => this.fetchData(),3000);
     }
   }
 

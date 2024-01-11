@@ -65,7 +65,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const slug = this.route.snapshot.params["slug"];
 
-    setInterval(() => this.fetchDatas(slug),1000);
+    setInterval(() => this.fetchDatas(slug),3000);
 
   }
 

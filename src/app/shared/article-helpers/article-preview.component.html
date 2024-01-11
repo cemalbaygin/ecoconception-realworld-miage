@@ -9,7 +9,13 @@
     </app-favorite-button>
   </app-article-meta>
 
-  <a [routerLink]="['/article', article.slug]" class="preview-link">
+
+  <div (click)="showDialog()"  class="preview-link">
+    <p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
+      <p style="color: red" [routerLink]="['/article', article.slug]">
+        Click ici pour acceder
+      </p>
+    </p-dialog>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
     <span>Read more...</span>
@@ -21,5 +27,5 @@
         {{ tag }}
       </li>
     </ul>
-  </a>
+  </div>
 </div>

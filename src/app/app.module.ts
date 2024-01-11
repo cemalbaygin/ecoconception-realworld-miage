@@ -13,6 +13,7 @@ import { TokenInterceptor } from "./core/interceptors/token.interceptor";
 import { ErrorInterceptor } from "./core/interceptors/error.interceptor";
 import { ApiInterceptor } from "./core/interceptors/api.interceptor";
 import {IvyCarouselModule} from "angular-responsive-carousel";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -21,6 +22,7 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     FooterComponent,
     HeaderComponent,

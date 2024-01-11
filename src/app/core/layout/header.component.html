@@ -15,9 +15,14 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register" routerLinkActive="active">
+        <p-dialog header="Header" [(visible)]="!visible" [style]="{ backgroundColor: 'black', width: '50vw'}">
+          <p style="color: red" (click)="visible= !visible" [routerLink]="['/register']">
+            Click ici pour acceder
+          </p>
+        </p-dialog>
+        <div class="nav-link" (click)="visible= !visible" routerLinkActive="active">
           Sign up
-        </a>
+        </div>
       </li>
     </ul>
 
