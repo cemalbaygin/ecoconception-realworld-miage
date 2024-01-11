@@ -42,22 +42,22 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 |  2 | Préférer la saisie assistée à l'autocomplétion                                         |        3 |              3 |                 3 |             3,00 |
 |  3 | Favoriser un design simple, épuré, adapté au web                                       |        4 |              3 |                 3 |             3,33 |
 |  4 | Privilégier une approche "mobile first", à défaut un chargement adaptatif              |        4 |              4 |                 5 |             4,33 |
-|  5 | Respecter le principe de navigation rapide dans l’historique                           |        3 |              4 |                 3 |             3,33 |
-|  6 | Limiter le nombre de requêtes HTTP                                                     |        4 |              3 |                 4 |             3,67 |
+|  5 | Respecter le principe de navigation rapide dans l’historique                    ✅      |        3 |              4 |                 3 |             3,33 |
+|  6 | Limiter le nombre de requêtes HTTP                                              ✅     |        4 |              3 |                 4 |             3,67 |
 |  7 | Stocker les données statiques localement                                               |        4 |              3 |                 4 |             3,67 |
 |  8 | Favoriser les pages statiques                                                          |        4 |              3 |                 5 |             4,00 |
 |  9 | Remplacer les boutons officiels de partage des réseaux sociaux                         |        4 |              4 |                 4 |             4,00 |
 | 10 | Découper les CSS                                                                       |        4 |              4 |                 4 |             4,00 |
-| 11 | Limiter le nombre de CSS                                                               |        4 |              4 |                 4 |             4,00 |
+| 11 | Limiter le nombre de CSS                                                        ✅      |        4 |              4 |                 4 |             4,00 |
 | 12 | Préférer les CSS aux images                                                            |        4 |              3 |                 4 |             3,67 |
 | 13 | Écrire des sélecteurs CSS efficaces                                                    |        3 |              3 |                 3 |             3,00 |
 | 14 | Grouper les déclarations CSS similaires                                                |        3 |              3 |                 2 |             2,67 |
 | 15 | Utiliser les notations CSS abrégées                                                    |        2 |              3 |                 2 |             2,33 |
 | 16 | Fournir une CSS print                                                                  |        3 |              4 |                 3 |             3,33 |
 | 17 | Favoriser les polices standards                                                        |        4 |              3 |                 4 |             3,67 |
-| 18 | Préférer les glyphs aux images                                                         |        4 |              3 |                 4 |             3,67 |
+| 18 | Préférer les glyphs aux images                                                  ✅      |        4 |              3 |                 4 |             3,67 |
 | 19 | Valider les pages auprès du W3C                                                        |        3 |              5 |                 2 |             3,33 |
-| 20 | Externaliser les CSS et JavaScript                                                     |        4 |              4 |                 4 |             4,00 |
+| 20 | Externaliser les CSS et JavaScript                                           ✅        |        4 |              4 |                 4 |             4,00 |
 | 21 | Ne pas redimensionner les images coté navigateur                                       |        4 |              4 |                 4 |             4,00 |
 | 22 | Éviter d'utiliser des images matricielles pour l'interface                             |        4 |              4 |                 4 |             4,00 |
 | 23 | Optimiser les images vectorielles                                                      |        4 |              4 |                 4 |             4,00 |
@@ -73,12 +73,12 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 | 33 | Mettre en cache les objets souvent accédés en JavaScript                               |        4 |              3 |                 4 |             3,67 |
 | 34 | Réduire les accès au DOM via JavaScript                                                |        3 |              3 |                 3 |             3,00 |
 | 35 | Minifier les fichiers CSS, JavaScript, HTML et SVG                                     |        4 |              3 |                 4 |             3,67 |
-| 36 | Compresser les fichiers CSS, JavaScript, HTML et SVG                                   |        4 |              3 |                 4 |             3,67 |
+| 36 | Compresser les fichiers CSS, JavaScript, HTML et SVG                         ✅        |        4 |              3 |                 4 |             3,67 |
 | 37 | Combiner les fichiers CSS et JavaScript                                                |        4 |              3 |                 4 |             3,67 |
 | 38 | Optimiser les images                                                                   |        4 |              3 |                 4 |             3,67 |
 | 39 | Optimiser la taille des cookies                                                        |        3 |              4 |                 3 |             3,33 |
 | 40 | Favoriser HSTS Preload list aux redirections 301                                       |        4 |              3 |                 4 |             3,67 |
-| 41 | Mettre en cache les réponses Ajax                                                      |        3 |              2 |                 4 |             3,00 |
+| 41 | Mettre en cache les réponses Ajax                                              ✅      |        3 |              2 |                 4 |             3,00 |
 | 42 | Adapter les sons aux contextes d'écoute                                                |        2 |              2 |                 3 |             2,33 |
 | 43 | Adapter les textes au web                                                              |        3 |              3 |                 3 |             3,00 |
 | 44 | Adapter les vidéos aux contextes de visualisation                                      |        3 |              2 |                 3 |             2,67 |
@@ -98,8 +98,8 @@ Détails des bonnes pratiques ici : [https://github.com/cnumr/best-practices/tre
 | 58 | Préférer une PWA à une application mobile native similaire au site web                 |        3 |              3 |                 3 |             3,00 |
 | 59 | Éviter les temps de blocages par des traitements JavaScript trop longs                 |        4 |              3 |                 4 |             3,67 |
 | 60 | Mettre en place une architecture élastique                                             |        3 |              3 |                 4 |             3,33 |
-| 61 | Limiter le nombre d'appels aux API HTTP                                                |        4 |              3 |                 5 |             4,00 |
-| 62 | Limiter le recours aux carrousels                                                      |        4 |              4 |                 4 |             4,00 |
+| 61 | Limiter le nombre d'appels aux API HTTP                                   ✅           |        4 |              3 |                 5 |             4,00 |
+| 62 | Limiter le recours aux carrousels                                         ✅            |        4 |              4 |                 4 |             4,00 |
 | 63 | Mettre en place un "Circuit breaker"                                                   |        2 |              2 |                 2 |             2,00 |
 | 64 | Favoriser le "Request collapsing"                                                      |        2 |              2 |                 2 |             2,00 |
 | 65 | Préférer la pagination au défilement infini                                            |        3 |              4 |                 3 |             3,33 |
