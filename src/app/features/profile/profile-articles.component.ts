@@ -10,6 +10,7 @@ import { Subject } from "rxjs";
 @Component({
   selector: "app-profile-articles",
   templateUrl: "./profile-articles.component.html",
+  styleUrls: ["./profile-articles.component.css"],
   imports: [ArticleListComponent],
   standalone: true,
 })

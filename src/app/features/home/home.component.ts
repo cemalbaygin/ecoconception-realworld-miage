@@ -14,7 +14,7 @@ import {TagModule} from "primeng/tag";
 @Component({
   selector: "app-home-page",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
+  styleUrls: ["./home.component.css", "./home2.component.css"],
   imports: [
     NgClass,
     ArticleListComponent,
