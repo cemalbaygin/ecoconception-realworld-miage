@@ -9,7 +9,8 @@ import { Subject } from "rxjs";
 import { UserService } from "../../core/services/user.service";
 import { LetDirective } from "@rx-angular/template/let";
 import { ShowAuthedDirective } from "../../shared/show-authed.directive";
-
+import { CarouselModule } from 'primeng/carousel';
+import {TagModule} from "primeng/tag";
 @Component({
   selector: "app-home-page",
   templateUrl: "./home.component.html",
@@ -21,11 +22,14 @@ import { ShowAuthedDirective } from "../../shared/show-authed.directive";
     LetDirective,
     NgForOf,
     ShowAuthedDirective,
+    CarouselModule,
+    TagModule,
   ],
   standalone: true,
 })
 export class HomeComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
+  products: string[] = ["bamboo-watch.jpg", "bamboo-watch.jpg", "bamboo-watch.jpg", "bamboo-watch.jpg", "bamboo-watch.jpg", "bamboo-watch.jpg","bamboo-watch.jpg"];
   listConfig: ArticleListConfig = {
     type: "all",
     filters: {},
